@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Gift, Sparkles, Volume2, VolumeX, QrCode, ChevronDown } from 'lucide-react';
 import { pianoPlayer } from '../utils/audio';
+import designerImg from '../assets/images/Designer.png';
 
 interface CoverHeroProps {
   momName: string;
@@ -65,9 +66,12 @@ export const CoverHero: React.FC<CoverHeroProps> = ({
       <div className="relative w-full rounded-3xl overflow-hidden border-2 border-[#D4AF37]/50 shadow-[0_15px_40px_rgba(0,0,0,0.9)] bg-[#121318] my-auto">
         <div className="relative aspect-[9/16] w-full overflow-hidden">
           <img
-            src="/src/assets/images/Designer.png"
+            src={designerImg || '/images/Designer.png'}
             alt="Thiệp chúc mừng 20.10 dành tặng Mẹ cùng túi Vascara TOT 0202"
             referrerPolicy="no-referrer"
+            onError={(e) => {
+              e.currentTarget.src = '/images/Designer.png';
+            }}
             className="w-full h-full object-cover"
           />
         </div>

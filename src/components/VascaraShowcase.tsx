@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Sparkles, ShieldCheck, CheckCircle2, X } from 'lucide-react';
+import bagFront from '../assets/images/vascara_tot_0202_front.jpg';
+import bagClasp from '../assets/images/vascara_tot_0202_clasp.jpg';
+import bagAngle from '../assets/images/vascara_tot_0202_angle.jpg';
+import bagSide from '../assets/images/vascara_tot_0202_side.jpg';
 
 interface VascaraShowcaseProps {
   onClose?: () => void;
@@ -12,22 +16,22 @@ export const VascaraShowcase: React.FC<VascaraShowcaseProps> = ({
 }) => {
   const images = [
     {
-      url: '/src/assets/images/vascara_tot_0202_front.jpg',
+      url: bagFront || '/images/vascara_tot_0202_front.jpg',
       title: 'Chính diện túi Vascara TOT 0202 màu đen',
       tag: 'Chính diện thanh lịch',
     },
     {
-      url: '/src/assets/images/vascara_tot_0202_clasp.jpg',
+      url: bagClasp || '/images/vascara_tot_0202_clasp.jpg',
       title: 'Cận cảnh khóa kim loại mạ vàng kép tinh tế & đường may tinh xảo',
       tag: 'Khóa kim loại sang trọng',
     },
     {
-      url: '/src/assets/images/vascara_tot_0202_angle.jpg',
+      url: bagAngle || '/images/vascara_tot_0202_angle.jpg',
       title: 'Góc nghiêng đường cong mềm mại và phom dáng đứng',
       tag: 'Góc nghiêng quý phái',
     },
     {
-      url: '/src/assets/images/vascara_tot_0202_side.jpg',
+      url: bagSide || '/images/vascara_tot_0202_side.jpg',
       title: 'Góc bên hông gọn gàng, đáy túi vững chãi',
       tag: 'Chi tiết bên hông',
     },
